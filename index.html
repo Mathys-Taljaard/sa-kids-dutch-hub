@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SA Kids Dutch Hub 🇿🇦🇳🇱 — Jou Nederlandse Avontuur!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇿🇦</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="app-logo" onclick="goToProfiles()">
+      <span class="logo-emoji">🇿🇦🇳🇱</span> SA Kids Dutch Hub
+    </div>
+    <div class="header-actions">
+      <button class="header-btn" onclick="goToProfiles()" title="Wissel van profiel">👤 Profiel</button>
+      <button class="header-btn" onclick="exportProgress()" title="Sla voortgang op">💾 Opslaan</button>
+      <button class="header-btn" onclick="importProgress()" title="Laad voortgang">📂 Laden</button>
+    </div>
+  </header>
+
+  <!-- Confetti container -->
+  <div id="confetti-container"></div>
+
+  <!-- Badge popup -->
+  <div id="badge-popup" class="badge-popup"></div>
+
+  <!-- ============ PROFILE SCREEN ============ -->
+  <div id="profile-screen" class="screen active">
+    <h2 style="text-align:center; margin-bottom:8px;">👋 Welkom bij SA Kids Dutch Hub!</h2>
+    <p style="text-align:center; color:var(--text-light); margin-bottom:20px;">Jou Nederlandse Avontuur! 🇿🇦🇳🇱 Oefen en word 'n taalkampioen! 🏆</p>
+    <div id="profile-list"></div>
+  </div>
+
+  <!-- ============ HOME SCREEN ============ -->
+  <div id="home-screen" class="screen">
+    <div id="home-welcome"></div>
+    <div id="home-badges"></div>
+    <div class="module-grid">
+      <button class="module-card" onclick="startModule('lezen')">
+        <span class="mod-emoji">📖</span>
+        <span class="mod-title">Begrijpend Lezen</span>
+        <span class="mod-desc">Lees en beantwoord vragen!</span>
+      </button>
+      <button class="module-card" onclick="startModule('woordenschat')">
+        <span class="mod-emoji">📚</span>
+        <span class="mod-title">Woordenschat</span>
+        <span class="mod-desc">Leer nieuwe woorden!</span>
+      </button>
+      <button class="module-card" onclick="startModule('spelling')">
+        <span class="mod-emoji">✍️</span>
+        <span class="mod-title">Spelling & Grammatica</span>
+        <span class="mod-desc">Oefen taalregels!</span>
+      </button>
+      <button class="module-card" onclick="startModule('rekenen')">
+        <span class="mod-emoji">🧮</span>
+        <span class="mod-title">Rekenen</span>
+        <span class="mod-desc">Oefen wiskunde!</span>
+      </button>
+      <button class="module-card" onclick="startModule('voortgang')">
+        <span class="mod-emoji">📊</span>
+        <span class="mod-title">Voortgang</span>
+        <span class="mod-desc">Bekijk je scores!</span>
+      </button>
+    </div>
+
+    <!-- Settings section on home -->
+    <div class="settings-section">
+      <h3>⚙️ Instellingen</h3>
+      <div class="settings-buttons">
+        <button class="reset-btn" onclick="showResetMenu()">🔄 Opnieuw beginnen</button>
+        <button class="reset-btn danger" onclick="confirmDeleteProfile()">🗑️ Profiel verwijderen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RESET MENU SCREEN ============ -->
+  <div id="reset-screen" class="screen">
+    <div id="reset-content"></div>
+  </div>
+
+  <!-- ============ LEZEN SCREEN ============ -->
+  <div id="lezen-screen" class="screen">
+    <div id="lezen-content"></div>
+  </div>
+
+  <!-- ============ VOCAB SCREEN ============ -->
+  <div id="vocab-screen" class="screen">
+    <div id="vocab-content"></div>
+  </div>
+
+  <!-- ============ REKENEN SCREEN ============ -->
+  <div id="rekenen-screen" class="screen">
+    <div id="rekenen-content"></div>
+  </div>
+
+  <!-- ============ SPELLING SCREEN ============ -->
+  <div id="spelling-screen" class="screen">
+    <div id="spelling-content"></div>
+  </div>
+
+  <!-- ============ PROGRESS SCREEN ============ -->
+  <div id="progress-screen" class="screen">
+    <div id="progress-content"></div>
+  </div>
+
+  <!-- Confirm dialog -->
+  <div id="confirm-dialog" class="badge-popup">
+    <div id="confirm-dialog-content" class="badge-popup-content"></div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
