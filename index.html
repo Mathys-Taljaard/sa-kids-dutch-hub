@@ -114,6 +114,17 @@
   </div>
 
   <script src="content.js"></script>
+  <script src="content-lezen-extra.js"></script>
+  <script src="content-woordenschat-extra.js"></script>
+  <script src="content-spelling-extra.js"></script>
+  <script>
+    // Merge extra content into CONTENT
+    ["age8_9", "age10_11", "age12_13"].forEach(level => {
+      if (EXTRA_LEZEN && EXTRA_LEZEN[level]) CONTENT.lezen[level] = CONTENT.lezen[level].concat(EXTRA_LEZEN[level]);
+      if (EXTRA_WOORDENSCHAT && EXTRA_WOORDENSCHAT[level]) CONTENT.woordenschat[level] = CONTENT.woordenschat[level].concat(EXTRA_WOORDENSCHAT[level]);
+      if (EXTRA_SPELLING && EXTRA_SPELLING[level]) CONTENT.spelling[level] = CONTENT.spelling[level].concat(EXTRA_SPELLING[level]);
+    });
+  </script>
   <script src="app.js"></script>
 </body>
 </html>
