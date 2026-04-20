@@ -610,7 +610,7 @@ const CONTENT = {
     { id: "streak-5", name: "Op Dreef", emoji: "🔥", desc: "5 vragen op een rij goed!", requirement: (p) => p.bestStreak >= 5 },
     { id: "streak-10", name: "Onhoudbaar", emoji: "⚡", desc: "10 vragen op een rij goed!", requirement: (p) => p.bestStreak >= 10 },
     { id: "spelling-pro", name: "Spellingskampioen", emoji: "✍️", desc: "15 spellingsoefeningen goed!", requirement: (p) => p.spellingCorrect >= 15 },
-    { id: "all-texts", name: "Leesbeest", emoji: "🐛", desc: "Alle teksten gelezen!", requirement: (p) => p.lezenDone >= 5 },
+    { id: "all-texts", name: "Leesbeest", emoji: "🐛", desc: "Alle teksten gelezen!", requirement: (p) => p.lezenDone >= 30 },
     { id: "perfect-text", name: "Alles Goed!", emoji: "💯", desc: "Een tekst met alles goed!", requirement: (p) => p.perfectTexts >= 1 },
     { id: "hundred", name: "De 100!", emoji: "💎", desc: "100 vragen beantwoord!", requirement: (p) => p.totalAnswered >= 100 },
     { id: "math-whiz", name: "Rekenwonder", emoji: "🧮", desc: "20 rekensommen goed!", requirement: (p) => (p.rekenCorrect || 0) >= 20 },
